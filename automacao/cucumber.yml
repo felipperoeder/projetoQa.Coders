@@ -1,0 +1,9 @@
+default: -p pretty --publish-quiet -p html -p development -p chrome
+
+pretty: --format pretty
+development: ENVIRONMENT=development
+production: ENVIRONMENT=production --publish-quiet
+
+chrome: BROWSER=chrome
+
+html: --format html --out=features/reports/report.html
